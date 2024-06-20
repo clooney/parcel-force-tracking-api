@@ -1,5 +1,5 @@
 # TrackingMore: Parcelforce Tracking API & Webhook
-[Parcelforce Tracking API](https://www.trackingmore.com/parcelforce-tracking-api.html) facilitates the integration of Parcelforce shipment data into your system, streamlining tracking processes for enhanced management.
+[Parcelforce Tracking API](https://www.trackingmore.com/parcel-force-tracking-api.html) facilitates the integration of Parcelforce shipment data into your system, streamlining tracking processes for enhanced management.
 
 TrackingMore enhances these capabilities with its [multi-carrier shipment tracking API](https://www.trackingmore.com/tracking-api), aggregating tracking data from more than 1,200 international carriers for comprehensive monitoring. 
 
