@@ -1,12 +1,12 @@
-Australia Post Tracking API - PHP
+Parcelforce Tracking API - PHP
 ================================
-Use PHP to track Australia Post shipments with Australia Post Tracking API.
+Use PHP to track Parcelforce shipments with Parcelforce Tracking API.
 
 Features
 --------
-- Real-time Australia Post tracking.
-- Batch Australia Post tracking.
-- Other features to manage your Australia Post tracking.
+- Real-time Parcelforce tracking.
+- Batch Parcelforce tracking.
+- Other features to manage your Parcelforce tracking.
 
 Installation
 ------------
@@ -31,7 +31,7 @@ To use this API, you need to generate your API key.
 - Give a name to your API key, and click "Save" .
 
 
-Then, start to track your Australia Post shipments.
+Then, start to track your Parcelforce shipments.
 
 Usage
 ----------
@@ -48,7 +48,7 @@ Create a tracking (Real-time tracking):
       $trackings = new Trackings($key);
       
       try {
-        $params = ['tracking_number'=>'0301006785462006320995','courier_code'=>'australia-post'];
+        $params = ['tracking_number'=>'0301006785462006320995','courier_code'=>'parcel-force'];
         $response = $trackings->createTracking($params);
       } catch (TrackingMoreException $e) {
         echo $e->getMessage();
@@ -69,8 +69,8 @@ Create trackings (Max. 40 tracking numbers create in one call):
         
         try {
             $params = [
-                ['tracking_number'=>'LK201223662AU','courier_code'=>'australia-post'],
-                ['tracking_number'=>'LH290032509AU','courier_code'=>'australia-post']
+                ['tracking_number'=>'LK201223662AU','courier_code'=>'parcel-force'],
+                ['tracking_number'=>'LH290032509AU','courier_code'=>'parcel-force']
             ];
             $response = $trackings->batchCreateTrackings($params);
         } catch (TrackingMoreException $e) {
@@ -94,7 +94,7 @@ Get status of the shipment:
     try {
 		# Perform queries based on various conditions
         # $params = ['created_date_min'=>'2023-08-23T06:00:00+00:00','created_date_max'=>'2023-09-05T07:20:42+00:00']; 
-        $params = ['courier_code'=>'australia-post','created_date_min'=>'2023-08-23T06:00:00+00:00','created_date_max'=>'2023-09-05T07:20:42+00:00'];
+        $params = ['courier_code'=>'parcel-force','created_date_min'=>'2023-08-23T06:00:00+00:00','created_date_max'=>'2023-09-05T07:20:42+00:00'];
         $response = $trackings->getTrackingResults($params);
     } catch (TrackingMoreException $e) {
         echo $e->getMessage();
